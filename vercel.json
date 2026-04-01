@@ -1,7 +1,7 @@
 {
   "installCommand": "pnpm install",
   "buildCommand": "pnpm --filter @workspace/binance-landing build",
-  "outputDirectory": "artifacts/binance-landing/dist/public",
+  "outputDirectory": "artifacts/binance-landing/dist",
   "env": {
     "PORT": "3000",
     "BASE_PATH": "/"
