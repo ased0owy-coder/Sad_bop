@@ -1,5 +1,5 @@
 import { useState } from "react";
-import heroImage from "@assets/IMG-20260331-WA0004_1774986815952.jpg";
+import heroImage from "./assets/hero.jpg";
 import WithdrawPage from "./pages/WithdrawPage";
 import VerifyPage from "./pages/VerifyPage";
 import { languages, t, type Lang } from "./i18n/translations";
