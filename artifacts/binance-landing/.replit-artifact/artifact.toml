@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Binance Landing"
+version = "1.0.0"
+id = "artifacts/binance-landing"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24193
+
+[services.development]
+run = "pnpm --filter @workspace/binance-landing run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/binance-landing", "run", "build" ]
+publicDir = "artifacts/binance-landing/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24193"
+BASE_PATH = "/"
